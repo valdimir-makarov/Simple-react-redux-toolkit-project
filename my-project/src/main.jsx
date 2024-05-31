@@ -4,7 +4,7 @@ import App from './App.jsx';
 import './index.css';
 import { Provider } from 'react-redux';
 import { store } from './store/Store.jsx';
-
+import FilteredProduct from './features/FilteredProduct.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,7 +15,7 @@ import {
 
 const Root = () => (
   <div>
-    <h1>Redux Practice Project</h1>
+  <App></App>
     <Outlet />  {/* This renders the child routes */}
   </div>
 );
@@ -25,9 +25,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     children: [
-      {
-       
-      },
+      { path: "/filteredProducts", element: <FilteredProduct/> },
+
       {
        
       }
