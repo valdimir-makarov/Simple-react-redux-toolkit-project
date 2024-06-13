@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import { ProductList } from "./components/ProductList.jsx";
 import CartSlice from "./features/CartSlice.jsx";
+import LoginPage from "./components/LoginPage.jsx";
 
 const Root = () => (
   <div>
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         path: "cartSlice",
         element: <CartSlice></CartSlice>,
       },
+
+      {
+        path:'login',
+        element:<LoginPage></LoginPage>
+      }
     ],
   },
 ]);
